@@ -1,16 +1,21 @@
+[← All systems](https://github.com/J0UH) · [Product engineering](https://github.com/J0UH/product-engineering)
+
 <p align="center">
-  <img src="assets/hero.png" alt="Technology adaptation and orchestration system illustration" width="100%" />
+  <img src="assets/hero.webp" alt="Three adaptations join an unchanged upstream spine at explicit orange seam collars" width="100%" />
 </p>
 
 # Technology adaptation and orchestration
 
 Building well does not always mean starting from zero. It often means understanding an existing system quickly, deciding what to keep, changing what matters, and preserving a safe path for licences, upgrades, and security fixes.
 
-[Discuss a similar system](mailto:ju@jomena.group?subject=Discuss%20Technology%20adaptation%20and%20orchestration) | [Book a technical call](mailto:ju@jomena.group?subject=Book%20a%20technical%20call%20about%20Technology%20adaptation%20and%20orchestration)
-
 ## The engineering problem
 
 Upstream projects arrive with their own domain assumptions and release cadence. Adapting them responsibly requires architectural judgment and clear separation between upstream work and local product decisions.
+
+
+## Foundation and adaptation
+
+The evaluated foundations include Base Web, Better Auth, BundUI's dashboard kit, `udm-le`, and other public or commercially licensed product stacks. The point of the work is not to claim those systems, but to understand their interfaces, licences, upgrade paths, and seams well enough to adapt them without erasing where they came from.
 
 ## What the system covers
 
@@ -25,17 +30,16 @@ Upstream projects arrive with their own domain assumptions and release cadence. 
 
 ```mermaid
 flowchart TD
-    n0["Upstream project"]
-    n1["Architecture review"]
-    n2["Adaptation boundary"]
-    n3["Product integration"]
-    n4["Verification"]
-    n5["Upgrade path"]
-    n0 --> n1
-    n1 --> n2
-    n2 --> n3
-    n3 --> n4
-    n4 --> n5
+accTitle: Technology adaptation and orchestration
+accDescr: Upstream fit and licence are reviewed before an explicit adaptation seam is created. Verification protects the integration contract, and every upstream release re-enters the review path.
+    upstream["Upstream project"] --> review{"Fit and licence?"}
+    review -->|No| alternative["Choose another foundation"]
+    review -->|Yes| seam["Explicit adaptation seam"]
+    seam --> integrate["Product integration"]
+    integrate --> verify{"Tests preserve contract?"}
+    verify -->|No| seam
+    verify -->|Yes| operate["Operating system"]
+    upstream -->|New release| review
 ```
 
 ## Build notes
@@ -44,8 +48,8 @@ flowchart TD
 - Avoid edits that make future security updates impossible.
 - Own the adaptation and orchestration without claiming the upstream invention.
 
-<sub>This page covers architecture, adaptation, and orchestration. Upstream projects remain credited to their maintainers and licences. Work produced under the Aryze umbrella remains private and owned by Aryze.</sub>
+<sub>Public overview only. Source code, customer data, credentials, and private operating details are not included.</sub>
 
 ## Talk through a similar problem
 
-If you are trying to build, untangle, or ship a system in this area, [send me a note](mailto:ju@jomena.group?subject=I%20need%20help%20with%20Technology%20adaptation%20and%20orchestration). If the problem needs a deeper technical conversation, [book a call by email](mailto:ju@jomena.group?subject=Book%20a%20technical%20call%20about%20Technology%20adaptation%20and%20orchestration).
+Working on something similar? [Tell me about it](mailto:ju@jomena.group?subject=Technology%20adaptation%20and%20orchestration).
