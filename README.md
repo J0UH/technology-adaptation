@@ -24,7 +24,7 @@ Upstream projects arrive with their own domain assumptions and release cadence. 
 ## System shape
 
 ```mermaid
-flowchart LR
+flowchart TD
     n0["Upstream project"]
     n1["Architecture review"]
     n2["Adaptation boundary"]
