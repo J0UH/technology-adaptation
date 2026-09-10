@@ -1,23 +1,28 @@
-[← All systems](https://github.com/J0UH) · [Product engineering](https://github.com/J0UH/product-engineering)
-
-<p align="center">
-  <img src="assets/hero.webp" alt="Three adaptations join an unchanged upstream spine at explicit orange seam collars" width="100%" />
-</p>
+[← All work](https://github.com/J0UH) · [Product engineering](https://github.com/J0UH/product-engineering)
 
 # Technology adaptation and orchestration
 
-Building well does not always mean starting from zero. It often means understanding an existing system quickly, deciding what to keep, changing what matters, and preserving a safe path for licences, upgrades, and security fixes.
+Understanding existing technology well enough to adapt it thoughtfully and keep it maintainable.
 
-## The engineering problem
+<img src="assets/hero-v2.webp" alt="Technology adaptation and orchestration illustrated as a crafted architectural model, with exposed sketch and structural framing" width="100%" />
 
-Upstream projects arrive with their own domain assumptions and release cadence. Adapting them responsibly requires architectural judgment and clear separation between upstream work and local product decisions.
+An existing system can save a great deal of work. It also arrives with a domain model, dependencies, a licence, and a view of how it should be operated.
 
+I enjoy finding the useful fit between that foundation and the product at hand. The work is in understanding what to keep, where a change belongs, and how the result can continue taking fixes from upstream.
 
-## Foundation and adaptation
+## Owning the adaptation
+
+The evaluated foundations include interface systems, authentication tools, dashboard kits, and other product stacks. Their original authorship remains visible.
+
+My focus is the local product decision: how the interfaces fit, which assumptions need changing, and where to keep a seam between the foundation and the adaptation.
+
+Upgrade and patch strategy influence those choices early. A shortcut that makes future security updates impractical can become more expensive than the work it saved. Good reuse gives a product a stronger starting point while preserving the identity and maintenance path of the technology underneath it.
+
+## Built on
 
 The evaluated foundations include Base Web, Better Auth, BundUI's dashboard kit, `udm-le`, and other public or commercially licensed product stacks. The point of the work is not to claim those systems, but to understand their interfaces, licences, upgrade paths, and seams well enough to adapt them without erasing where they came from.
 
-## What the system covers
+## What the work covers
 
 - Architecture and dependency evaluation
 - Design-system and application adaptation
@@ -26,7 +31,8 @@ The evaluated foundations include Base Web, Better Auth, BundUI's dashboard kit,
 - Licence and attribution management
 - Product-specific orchestration
 
-## System shape
+<details>
+<summary>A closer look at the technical flow</summary>
 
 ```mermaid
 flowchart TD
@@ -42,14 +48,14 @@ accDescr: Upstream fit and licence are reviewed before an explicit adaptation se
     upstream -->|New release| review
 ```
 
-## Build notes
+</details>
 
-- Preserve upstream identity and licence history.
-- Avoid edits that make future security updates impossible.
-- Own the adaptation and orchestration without claiming the upstream invention.
+## Related work
 
-<sub>Public overview only. Source code, customer data, credentials, and private operating details are not included.</sub>
+- [Product engineering](https://github.com/J0UH/product-engineering)
+- [CEX and DAX platform adaptation](https://github.com/J0UH/cex-platform-adaptation)
+- [CRM and relationship operations](https://github.com/J0UH/crm-operations)
 
-## Talk through a similar problem
+Working on a similar problem? [Tell me what you are building](mailto:ju@jomena.group?subject=Technology%20adaptation%20and%20orchestration).
 
-Working on something similar? [Tell me about it](mailto:ju@jomena.group?subject=Technology%20adaptation%20and%20orchestration).
+*This is a public account of the work. Source code and private operating details are not included in this repository.*
